@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+#get-user-div, #post-user-div, #put-user-div, #delete-user-div{
+    text-align: center;
+    border: 2px solid black;
+    padding-bottom: 25px;
+    margin: 5px;
+}
+
+#get-header, #post-header, #post-header, #delete-header{
+    font-family: "Lexend", sans-serif;
+    font-size: xx-large;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#get-id-lable, #first-name-lable, #last-name-label, #user-age-lable, #user-email-label, #put-id-label, #delete-id-lable{
+    font-family: "Lexend", sans-serif;
+    font-size: larger;
+    font-weight: 400;
+}
+#get-id, #first-name, #last-name, #user-age, #user-email, #put-id, #put-first-name, #put-last-name,#put-user-age, #put-user-email, #delete-id{
+    padding: 5px;
+    font-size: 16px;
+    margin: 2px;
+}
+#get-user-para, #new-user-para, #update-user-list, #delete-user-para{
+    font-family: "Lexend", sans-serif;
+    text-align: center;
+}
+#get-btn, #post-btn, #put-btn, #delete-btn{
+    font-size: 18px;
+    color: #060606;
+    font-family: "Lexend", sans-serif;    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    margin-top: 10px;
+}
+#get-btn:focus, #get-btn:hover, #post-btn:focus, #post-btn:hover, #put-btn:focus, #put-btn:hover, #delete-btn:focus, #delete-btn:hover{
+    color: #0713f3;
+}
+#get-btn:focus::after, #get-btn:hover::after, #post-btn:focus::after, #post-btn:hover::after, #put-btn:focus::after, #put-btn:hover::after, #delete-btn:focus::after, #delete-btn:hover::after{
+    width: 100%;
+    left: 0%;
+}
+#get-btn::after, #post-btn::after, #put-btn::after, #delete-btn::after{
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #0713f3;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+#update-user-list{
+    list-style-type: none;
+}
