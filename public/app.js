@@ -166,22 +166,34 @@ deletebtn.addEventListener("click", async () => {
     //variable to handle the user input 
     const userId = document.getElementById('delete-id').value;
 
-    //starting a try catch
-    try {
-        //sending a delete with user input as value
-        const response = await fetch(`${apiUri}/${userId}`, {
+    //boolen to have user confirm delete 
+    const isConfirmed = window.confirm(`Are you sure you want to delete user ${userId}?`);
+
+    const deleteUserMsg = document.getElementById('delete-user-para');
+
+    //if true do this 
+    if(isConfirmed){
+        //starting a try catch
+        try {
+            //sending a delete with user input as value
+            const response = await fetch(`${apiUri}/${userId}`, {
             method: "DELETE",
-        });
+            });
 
         //if response not ok log error
         if(!response.ok){
             console.log("Error");
         } else {
-            //id ok log the user that was deleted
+            //if ok log the user that was deleted
             console.log(`User ${userId} deleted`);
             document.getElementById('delete-id').value = "";
+            deleteUserMsg.textContent = `User ${userId} deleted.`
         }
-    } catch(error){ //catch any errors 
+        } catch(error){ //catch any errors 
         console.log("Error", error);
+        }
+    } else {
+        console.log('Delete Cancelled')
+        deleteUserMsg.textContent = `Delete Cancelled`
     }
 })
