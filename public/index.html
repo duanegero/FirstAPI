@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+</head>
+<body>
+    <div id="get-user-div">
+        <h3>Get User</h3>
+        <form id="get-form">
+            <label for="get-id" id="get-id-lable">User ID:</label>
+            <input id="get-id" type="number" required placeholder="Enter ID">
+            <button id="get-btn" type="button">Get User</button>
+            <p id="get-user-para"></p>
+        </form>
+    </div>
+    <div id="post-user-div">
+        <h3>Create New User</h3>
+        <form id="post-user-form">
+            <label for="first-name" id="first-name-lable">First Name:</label>
+            <input id="first-name" type="text" required placeholder="Enter First Name">
+            <br><label for="last-name" id="last-name-label">Last Name:</label>
+            <input id="last-name" type="text" required placeholder="Enter Last Name">
+            <br><label for="user-age" id="user-age-lable">Age:</label>
+            <input id="user-age" type="number" required placeholder="Enter Age">
+            <br><label for="user-email" id="user-email-label">Email:</label>
+            <input id="user-email" type="email" required placeholder="Enter Email">
+            <button id="post-btn" type="button">Post User</button>
+            <p id="new-user-para"></p>
+        </form>
+    </div>
+    <div id="put-user-div">
+        <h3>Update User</h3>
+        <form id="put-user-form"></form>
+            <label for="put-id" id="put-id-label">User ID</label>
+            <input id="put-id" type="number" required placeholder="Enter ID">
+            <br><label for="first-name" id="first-name-lable">First Name:</label>
+            <input id="put-first-name" autocomplete="off" type="text" required placeholder="Enter First Name">
+            <br><label for="last-name" id="last-name-label">Last Name:</label>
+            <input id="put-last-name" autocomplete="off" type="text" required placeholder="Enter Last Name">
+            <br><label for="user-age" id="user-age-lable">Age:</label>
+            <input id="put-user-age" type="number" required placeholder="Enter Age">
+            <br><label for="user-email" id="user-email-label">Email:</label>
+            <input id="put-user-email" type="email" required placeholder="Enter Email">
+            <button id="put-btn" type="button">Put User</button>
+            <ul id="update-user-list">
+                <li>test</li>
+            </ul>
+        </form>
+    </div>
+    <div id="delete-user-div">
+        <h3>Delete User</h3>
+        <form id="delete-form"></form>
+            <label for="delete-id" id="delete-id-lable">User ID:</label>
+            <input id="delete-id" type="number" required placeholder="Enter ID">
+            <button id="delete-btn" type="button">Delete User</button>
+        </form>
+    </div>
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
