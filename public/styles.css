@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
-#get-user-div, #post-user-div, #put-user-div, #delete-user-div{
+#get-user-div, #post-user-div, #put-user-div, #delete-user-div, #get-all-users-div{
     text-align: center;
     border: 2px solid black;
     padding-bottom: 25px;
     margin: 5px;
 }
 
-#get-header, #post-header, #post-header, #delete-header{
+#get-header, #post-header, #post-header, #delete-header, #get-all-header{
     font-family: "Lexend", sans-serif;
     font-size: xx-large;
     font-weight: 600;
@@ -27,7 +27,7 @@
     font-family: "Lexend", sans-serif;
     text-align: center;
 }
-#get-btn, #post-btn, #put-btn, #delete-btn{
+#get-btn, #post-btn, #put-btn, #delete-btn, #get-all-btn{
     font-size: 18px;
     color: #060606;
     font-family: "Lexend", sans-serif;    font-weight: 600;
@@ -41,14 +41,14 @@
     transition-property: color;
     margin-top: 10px;
 }
-#get-btn:focus, #get-btn:hover, #post-btn:focus, #post-btn:hover, #put-btn:focus, #put-btn:hover, #delete-btn:focus, #delete-btn:hover{
+#get-btn:focus, #get-btn:hover, #post-btn:focus, #post-btn:hover, #put-btn:focus, #put-btn:hover, #delete-btn:focus, #delete-btn:hover, #get-all-btn:focus, #get-all-btn:hover{
     color: #0713f3;
 }
-#get-btn:focus::after, #get-btn:hover::after, #post-btn:focus::after, #post-btn:hover::after, #put-btn:focus::after, #put-btn:hover::after, #delete-btn:focus::after, #delete-btn:hover::after{
+#get-btn:focus::after, #get-btn:hover::after, #post-btn:focus::after, #post-btn:hover::after, #put-btn:focus::after, #put-btn:hover::after, #delete-btn:focus::after, #delete-btn:hover::after, #get-all-btn:focus:after, #get-all-btn:hover::after{
     width: 100%;
     left: 0%;
 }
-#get-btn::after, #post-btn::after, #put-btn::after, #delete-btn::after{
+#get-btn::after, #post-btn::after, #put-btn::after, #delete-btn::after, #get-all-btn::after{
     content: "";
     pointer-events: none;
     bottom: -2px;
@@ -63,4 +63,11 @@
 }
 #update-user-list{
     list-style-type: none;
+}
+
+#all-user-list{
+    text-align: left;
+    font-family: "Lexend", sans-serif;
+    font-size: larger;
+    font-weight: 400;
 }
