@@ -53,10 +53,14 @@
         <h3 id="delete-header">Delete User</h3>
         <form id="delete-form"></form>
             <label for="delete-id" id="delete-id-lable">User ID:</label>
-            <input id="delete-id" type="number" required placeholder="Enter ID">
+            <input id="delete-id" type="number" required placeholder="Enter ID" min="0">
             <br><button id="delete-btn" type="button">Delete</button>
             <p id="delete-user-para"></p>
         </form>
+    </div>
+    <div id="get-all-users-div">
+        <button id="get-all-btn" type="button">Get All</button>
+        <ul id="all-user-list"></ul>
     </div>
     <script type="module" src="./app.js"></script>
 </body>

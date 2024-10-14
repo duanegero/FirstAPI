@@ -12,17 +12,10 @@ let users = [
 
 //defining a route for root URL
 router.get("/", (req, res) => {
-    
-    const { name } = req.query //getting name from query parameters 
-    
-    //if no name given
-    if(!name){
         res.json(users) //returning the users array in json
-    } else {
-        const filteredNames = users.filter(user => user.first_name.toLowerCase() === name.toLowerCase()); //filter the users array returning user whoes first name matches
-        res.json(filteredNames); //if name found return json data 
     }
-});
+);
+
 
 router.get("/:id", (req, res) => {
     const userId = parseInt(req.params.id); //parsing id from the url and converting to Int 
