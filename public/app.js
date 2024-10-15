@@ -7,35 +7,6 @@ const putbtn = document.getElementById('put-btn');
 const deletebtn = document.getElementById('delete-btn');
 const getAllBtn = document.getElementById('get-all-btn');
 
-//creating async event lister 
-getAllBtn.addEventListener("click", async () => {
-    const allUserList = document.getElementById('all-user-list'); //creating a variable to handle HTML list
-    allUserList.innerText = ""; //clearing the list
-
-    //starting the try catch
-    try{
-        const response = await fetch(`${apiUri}`) //fetching info and storing in variable
-
-        //if no response send error
-        if(!response.ok){
-            console.log('Users Not Found')
-        } else {
-            //if response ok store json in users variable
-            const users = await response.json()
-            console.log(users) //log for testing
-
-            //for each loop to loop through returned json object
-            users.forEach(user => {
-                const newListElement = document.createElement('li'); //creating new html list element
-                newListElement.textContent = `${user.first_name} ${user.last_name} Age: ${user.age}` //adding text content to new element
-                allUserList.appendChild(newListElement); //adding element to the list
-            })
-        }
-    } catch(error){ //catch if error and log error
-        console.log(error)
-    }
-}) 
-
 //making async event lister to take action on button click
 getBtn.addEventListener("click", async () => {
     const userId = document.getElementById('get-id').value; //getting the user input assigning to variable
@@ -227,3 +198,32 @@ deletebtn.addEventListener("click", async () => {
         deleteUserMsg.textContent = `Delete Cancelled`
     }
 })
+
+//creating async event lister 
+getAllBtn.addEventListener("click", async () => {
+    const allUserList = document.getElementById('all-user-list'); //creating a variable to handle HTML list
+    allUserList.innerText = ""; //clearing the list
+
+    //starting the try catch
+    try{
+        const response = await fetch(`${apiUri}`) //fetching info and storing in variable
+
+        //if no response send error
+        if(!response.ok){
+            console.log('Users Not Found')
+        } else {
+            //if response ok store json in users variable
+            const users = await response.json()
+            console.log(users) //log for testing
+
+            //for each loop to loop through returned json object
+            users.forEach(user => {
+                const newListElement = document.createElement('li'); //creating new html list element
+                newListElement.textContent = `${user.first_name} ${user.last_name} Age: ${user.age}` //adding text content to new element
+                allUserList.appendChild(newListElement); //adding element to the list
+            })
+        }
+    } catch(error){ //catch if error and log error
+        console.log(error)
+    }
+}) 
